@@ -7,11 +7,13 @@ import com.mx.mex.Services.ISistema;
 
 
 @Controller
-@RequestMapping ("iThingsHouse")
+@RequestMapping ("Sistema")
 public class SistemaController {
 	@Autowired
-	private ISistema iiThingsHouse;
+	private ISistema iSistema;
 	
+	
+	// COMENTARIO PARA VALIDAR CAMBIOS
 	@RequestMapping (value="/Home")
 	public String vistaiThingsHouse() {
 		return "Home";
