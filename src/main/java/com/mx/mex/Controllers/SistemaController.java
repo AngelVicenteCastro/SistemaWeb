@@ -12,12 +12,8 @@ public class SistemaController {
 	@Autowired
 	private ISistema iSistema;
 	
-	
-	// COMENTARIO PARA VALIDAR CAMBIOS
-	@RequestMapping (value="/Home")
-	public String vistaiThingsHouse() {
-		return "Home";
-	}
+	@RequestMapping (value= "/LoginTienda")
+	public String vistaTrabajadores() {return "LoginTienda";}
 }
 
 
