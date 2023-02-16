@@ -13,7 +13,7 @@ public class SistemaController {
 	private ISistema iSistema;
 	
 	@RequestMapping (value= "/LoginTienda")
-	public String vistaTrabajadores() {return "LoginTienda";}
+	public String vistaTienda() {return "LoginTienda";}
 }
 
 
