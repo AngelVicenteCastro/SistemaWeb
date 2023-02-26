@@ -59,8 +59,27 @@ public class ControllerPrincipal {
 @Autowired
 private InterfaceServicePrincipal servicio;
 	
+@RequestMapping(value = "/Login")
+public String loggin(ModelMap model) {
 
-Usuario usuario; // DECLARACION
+	List<Usuario> usuarios = new ArrayList<Usuario>();
+	
+	
+	
+	usuarios = servicio.obtenerUsuarios();
+	
+	for(Usuario datos : usuarios) {
+		System.out.println("Nombre: "+datos.getNombre());
+		System.out.println("Edad: "+datos.getEdad());
+		System.out.println("Direccion: "+datos.getDireccion());
+	}
+	
+
+	return "Login";//RETORN A LA VISTA DE LOGIN
+	
+	
+}
+//Usuario usuario; // DECLARACION
 //URL O SERVICIO DE MI CONTROLADOR
 /*
  * @value = nombre de la URL
@@ -83,7 +102,7 @@ public ResponseEntity<List<RegimenFiscal>> regimenFiscal() {
 	return new ResponseEntity<List<RegimenFiscal>>(service.obtenerRegimenFiscal(), httpHeaders, HttpStatus.OK);
 }
 */
-
+/*
 @RequestMapping(value = "/Login")
 public String loggin(ModelMap model) {
 
@@ -112,7 +131,7 @@ public String Inicio(ModelMap model) {
 	return "Inicio";//RETORN A LA VISTA DE LOGIN
 	
 	
-}
+}*/
 
 	
 

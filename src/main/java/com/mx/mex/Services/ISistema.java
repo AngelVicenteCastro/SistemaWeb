@@ -1,5 +1,8 @@
 package com.mx.mex.Services;
 
-public interface ISistema {
+import com.mx.mex.Dto.EmpleadosMPDTO;
 
+public interface ISistema {
+	String validarEmpleado(EmpleadosMPDTO datos);
+	String insertarEmpleado(EmpleadosMPDTO datos);
 }
